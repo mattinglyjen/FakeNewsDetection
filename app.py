@@ -1,17 +1,16 @@
 # this file takes input from the html file, uses the input to run the serialized model (Pickled model), and then 
 # outputs the target information
 
+from flask import Flask, render_template, url_for, request
+import pandas as pd
 import pickle
-
 import joblib
 import nltk
-import pandas as pd
-from flask import Flask, render_template, request, url_for
-from joblib import dump, load
+from joblib import load, dump
+from sklearn import preprocessing
+from sklearn import metrics
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from sklearn import metrics, preprocessing
-
 nltk.download('stopwords')
 
 # load dataset into dataframe object 
@@ -24,7 +23,7 @@ nltk.download('stopwords')
 
 # initialize new Flask instance with argument __name__ 
 app = Flask(__name__)
-model = pickle.load(open('Heroku\FakeNewsDetection\model2.pkl', 'rb'))
+model = pickle.load(open('trained_regression_model.pkl', 'rb'))
 
 # ROUTES
 @app.route('/')
@@ -51,7 +50,6 @@ def predict():
 
 import logging
 import sys
-
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
@@ -59,3 +57,4 @@ app.logger.setLevel(logging.ERROR)
 # on the server when the script is directly executed by Python interpreter
 if __name__ == '__main__':
     app.run(debug=True)
+
