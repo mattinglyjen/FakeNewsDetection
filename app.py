@@ -1,17 +1,18 @@
 # this file takes input from the html file, uses the input to run the serialized model (Pickled model), and then 
 # outputs the target information
 
-from flask import Flask, render_template, url_for, request
-import pandas as pd
 import pickle
+
 import joblib
 import nltk
-import os
-from joblib import load, dump
-from sklearn import preprocessing
-from sklearn import metrics
+import pandas as pd
+from flask import Flask, render_template, request, url_for
+from joblib import dump, load
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from sklearn import metrics, preprocessing
+
+nltk.download('stopwords')
 
 # load dataset into dataframe object 
 #df_true = pd.read_csv("https://final-project-data-rjj.s3.us-east-2.amazonaws.com/True.csv")
@@ -22,15 +23,8 @@ from nltk.tokenize import word_tokenize
 #df = pd.concat([df_true, df_fake]).reset_index(drop = True)
 
 # initialize new Flask instance with argument __name__ 
-
-# filenamelst_abspathname = os.path.abspath('..model.pkl')
-# print(filenamelst_abspathname)
-# model = open(str(filenamelst_abspathname),'wb')
-
-
 app = Flask(__name__)
-model = pickle.load(open("model2.pkl", 'rb'))
-
+model = pickle.load(open('Heroku\FakeNewsDetection\model2.pkl', 'rb'))
 
 # ROUTES
 @app.route('/')
@@ -52,9 +46,15 @@ def predict():
         input_test2 = [par_text]
         input_output = [word for word in input_test2 if not word in stop_words]
         news_prediction = model.predict(input_output)   
-        
+ 
         return render_template('home.html', prediction = news_prediction)
-        
+
+import logging
+import sys
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 # the if __name == '__main__' statement ensure that the run function will only run the application 
 # on the server when the script is directly executed by Python interpreter
 if __name__ == '__main__':
