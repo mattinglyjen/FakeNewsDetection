@@ -1,1 +1,1 @@
-web: gunicorn FakeNewsDetection.app:app
+web: gunicorn app:app
