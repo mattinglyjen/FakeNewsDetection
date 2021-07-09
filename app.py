@@ -6,6 +6,7 @@ import pandas as pd
 import pickle
 import joblib
 import nltk
+import os
 from joblib import load, dump
 from sklearn import preprocessing
 from sklearn import metrics
@@ -21,8 +22,15 @@ from nltk.tokenize import word_tokenize
 #df = pd.concat([df_true, df_fake]).reset_index(drop = True)
 
 # initialize new Flask instance with argument __name__ 
+
+# filenamelst_abspathname = os.path.abspath('..model.pkl')
+# print(filenamelst_abspathname)
+# model = open(str(filenamelst_abspathname),'wb')
+
+
 app = Flask(__name__)
-model = pickle.load(open('trained_regression_model.pkl', 'rb'))
+model = pickle.load(open("model2.pkl", 'rb'))
+
 
 # ROUTES
 @app.route('/')
@@ -44,13 +52,10 @@ def predict():
         input_test2 = [par_text]
         input_output = [word for word in input_test2 if not word in stop_words]
         news_prediction = model.predict(input_output)   
- 
+        
         return render_template('home.html', prediction = news_prediction)
-    
+        
 # the if __name == '__main__' statement ensure that the run function will only run the application 
 # on the server when the script is directly executed by Python interpreter
 if __name__ == '__main__':
     app.run(debug=True)
-
-    # this is the best
-
