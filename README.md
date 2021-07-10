@@ -52,6 +52,8 @@ RANDOM FOREST       |      99.14%     | 354.86133909225464 |
   ![](Images/TrueFakeChart.png)
 
 
+https://github.com/mattinglyjen/FakeNewsDetection/issues/1#issue-941168061
+
 ------------------------------------------------------------------------------------------------------------------
 Project Proposal: Machine Learning to Find Fake News
 
