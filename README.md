@@ -2,7 +2,7 @@
 
 Presentation Date: 7/10/2021
                                                                                                                          
-Project Team: Jennifer Duffy, Robin Evans, Jennifer Mattingly 
+Project Team: Jennifer Duffy, Robin Evans, Jennifer Mattingly <br>
 ![](Images/WordBoard.png)
 Project Summary:
 
@@ -53,6 +53,7 @@ RANDOM FOREST       |      99.14%     | 354.86133909225464 |
 
 
 ![image](https://github.com/mattinglyjen/FakeNewsDetection/issues/1#issue-941168061)
+![image](https://github.com/mattinglyjen/FakeNewsDetection/issues/2#issue-941169237.png)
 
 ------------------------------------------------------------------------------------------------------------------
 Project Proposal: Machine Learning to Find Fake News
