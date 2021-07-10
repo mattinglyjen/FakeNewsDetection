@@ -1,10 +1,8 @@
-# Final Project: FakeNewsDetection![](Images/Detecting.jpg)<br>
+#  ![](Images/WhatIsFakeNews.jpg) Final Project: FakeNewsDetection   ![](Images/Detecting.jpg)<br>
 
 Presentation Date: 7/10/2021
                                                                                                                          
-Project Team: Jennifer Duffy, Robin Evans, Jennifer Mattingly
-
-![](Images/BreakingNews.jpg)
+Project Team: Jennifer Duffy, Robin Evans, Jennifer Mattingly  ![](Images/BreakingNews.jpg)
 
 Project Summary:
 
@@ -47,15 +45,13 @@ RANDOM FOREST       |      99.14%     | 354.86133909225464 |
 
 
 
+   ![]{Images/Reliable.jpg)
 
 
+------------------------------------------------------------------------------------------------------------------
+Project Proposal: Machine Learning to Find Fake News
 
----------------------------------------------------------------------:
-Project Proposal: 
-Machine Learning to Find Fake News
-
-
-The objective of our project is to use machine learning to determine whether a given article is fake or real news. We will create a web-based user interface in which a user can type in some text and the algorithm will predict whether the news is fake or real.
+The objective of our project is to use machine learning to determine whether a given article is fake or real news. We will create a web-based user interface in which a user can type in some text and the algorithm will predict whether the news is fake or real. Ideally, companies, governments, and other entities can use this type of process to determine the likelihood of whether a news article that is being spread by social media or other means is fake or is true.
 
 
 Data Source:
@@ -80,22 +76,20 @@ Proposed Data Analysis Process:<br>
 •    Save the model.<br>
 •    Deploy the app to the web.<br>
 
-Tools/ libraries:
-<br>
+Tools/ libraries:<br>
+
 Python/ Pandas<br>
 Python Matplotlib<br>
 Scikit-Learn/other machine learning libraries<br>
 SQL (pgAdmin)<br>
 Amazon Web Services (AWS)<br>
 Heroku (Web deployment)<br>
-Portions of code adapted from:
-https://www.kaggle.com/rodolfoluna/fake-news-detector<br>
+Portions of code adapted from:<br>
+https://www.kaggle.com/rodolfoluna/fake-news-detector<br> /
 https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html<br>
 
 
-Ideally, companies, governments, and other entities can use this type of process to determine the likelihood of whether a news article that is being spread by social media or other means is fake or is true.
 
 
-
-![](Images/FactFake.jpg)    ![](Images/Game.jpg)      ![](Images/WhatIsFakeNews.jpg) 
+  ![](Images/FactFake.jpg)                               ![](Images/Game.jpg)    
 
