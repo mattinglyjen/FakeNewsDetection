@@ -39,7 +39,7 @@ pickle
 
 FAKE DETECTION MODEL ACCURACIES:<br>
 |       MODEL       |     ACCURACY    |      RUNTIME       |
-
+|-------------------|-----------------|--------------------|
 LOGISTIC REGRESSION |      98.64%     | 10.355125665664673 | 
 GRADIENT            |      99.58%     | 172.46598076820374 |
 RANDOM FOREST       |      99.14%     | 354.86133909225464 |
