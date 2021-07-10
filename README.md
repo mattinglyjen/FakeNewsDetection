@@ -8,19 +8,11 @@ Project Summary:
 
 Our project team set out to use machine learning tools to navigate as a means of detectind 'Fake' or 'Real' news in online articles, social media, publications, etc. The issue of detecting fake news has garnered increased attention globally and machine learning algorithms are specifically intended for prediction the presence of 'fake' information, which can also fuel this fake news by cyber criminals. We utilized the NLP components to detect whether text in our datasets are sourced from trusted articles or not.
 
-We developed 
+We started with creating our Python file and importing our files (True.csv/Fake.csv) along with the below listed dependencies. We ran our preliminary data processing steps of displaying our orignal table and identified our target variable: {target: 'true', 'fake'}. Upon cleaning our datasets, we then developed code to drop stop words using NLTK and used gensim to parse out the common/unwanted 2-letter words--leaving us with 9,277,072 words/ 108,705 unique words. The ultimate goal was to convert 44k+ articles into a joined dataframe of continuous string of text per article.
 
-1.     Define the problem statement
-2.     Import libraries/datasets and perform preliminary data processing
-3.     Perform Exploratory data analysis using visualization tools and/ or statistical methods
-4.     Perform data preprocessing and cleaning
-5.     Visualize datasets
-6.     Prepare the data by performing tokenization and padding
-7.     Train an LSTM Model
-8.     Assess/evaluate trained model performance
-9.     Create user interface/ interaction
-10.  Deploy to Heroku
+We incorpoated several visualizations for the various article sources, gathered counts of true vs. fake words, generated a WordCloud cluster of true/fake text, and performed tokenizaiton & padding for word count & frequency. Next we split, tested and trained our data under our 'clean_joined' dataframe. This led us to the point of building and training our model through the use of logistic regression, gradient, and random forest classifiers. Our model showed an exceptional accuracy rate of 98% or better in each model. The logistic regression model yielded the most efficient outcomes and was chosen  to deploy our input predictions for the web display.
 
+Moved on to created our Flask, template and static files, which successfully executed our web display where an end user is able to add any combination of word phrases for evaluation that leads to a 'true' or 'fake' result.
 
 Dependencies Used for Model:
 |--------------------------|
