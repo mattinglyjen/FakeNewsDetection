@@ -3,7 +3,7 @@
 Presentation Date: 7/10/2021
                                                                                                                          
 Project Team: Jennifer Duffy, Robin Evans, Jennifer Mattingly 
-![](Images/Screen Shot 2021-07-09 at 11.36.06 PM.png)
+![](Images/WordBoard.png)
 Project Summary:
 
 Our project team set out to use machine learning tools to navigate as a means of detectind 'Fake' or 'Real' news in online articles, social media, publications, etc. The issue of detecting fake news has garnered increased attention globally and machine learning algorithms are specifically intended for prediction the presence of 'fake' information, which can also fuel this fake news by cyber criminals. We utilized the NLP components to detect whether text in our datasets are sourced from trusted articles or not.
@@ -49,7 +49,7 @@ RANDOM FOREST       |      99.14%     | 354.86133909225464 |
 
 
 
-  ![](Images/Screen Shot 2021-07-09 at 11.38.13 PM.png)
+  ![](Images/TrueFakeChart.png)
 
 
 ------------------------------------------------------------------------------------------------------------------
