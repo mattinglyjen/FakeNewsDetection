@@ -97,5 +97,5 @@ Ideally, companies, governments, and other entities can use this type of process
 
 
 
-
+![](Images/FactFake.jpg)    ![](Images/Game.jpg)      ![](Images/WhatIsFakeNews.jpg) 
 
